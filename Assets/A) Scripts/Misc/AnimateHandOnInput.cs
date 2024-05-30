@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class AnimateHandOnInput : MonoBehaviour
 {
-    // Publicly accessible variables
+    // Public variables
     public InputActionProperty pinchAnimationAction; // Interaction input button
     public InputActionProperty gripAnimationAction; // Interaction input button
     public Animator handAnimator; // Animation of hand
@@ -17,6 +17,5 @@ public class AnimateHandOnInput : MonoBehaviour
 
         handAnimator.SetFloat("Trigger", triggerValue); // Animate hand based on input value
         handAnimator.SetFloat("Grip", gripValue); // Animate hand based on input value
-
     }
 }

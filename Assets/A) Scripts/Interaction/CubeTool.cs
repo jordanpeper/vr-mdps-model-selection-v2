@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CubeTool : MonoBehaviour
 {
-    // VARIABLES
+    // Variables
     public Transform leftHandTransform;
     public Transform rightHandTransform;
     public InputActionProperty _rightGrab;

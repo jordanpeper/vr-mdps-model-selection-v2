@@ -7,11 +7,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BoxExporter : MonoBehaviour
 {
-    //// Publicly accessible variables
+    // Variables
     public GameBehavior gameBehavior;
     public InputActionProperty deleteButton;
-
-    // Privately accessible variables
     private BoxCollider _collider;
     private int _frameDelay = 75;
     private bool _countdownActive = false;
@@ -74,6 +72,7 @@ public class BoxExporter : MonoBehaviour
         }
     }
 
+    // Detect whether a position fallse within the bounds of the cube tool
     bool PointInCube(Vector3 point)
     {
         Vector3 pointInCubeSpace = transform.InverseTransformPoint(point);

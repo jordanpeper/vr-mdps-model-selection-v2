@@ -18,7 +18,6 @@ public class CloudGenerator : MonoBehaviour
     private Color[] _categoricalColors; // Color array for data class materials
     private int _numSubdivisions;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +34,6 @@ public class CloudGenerator : MonoBehaviour
         // Set group counts in game behavior
         _gameBehavior.SetGroupCounts();
     }
-
 
     // Instantiate the data cloud
     private void InstantiateDataCloud()
@@ -154,8 +152,7 @@ public class CloudGenerator : MonoBehaviour
 
     }
 
-
-    // Generate n distinct colors for use in 
+    // Generate distinct colors
     private Color[] GenerateColors(int numGroups)
     {
         // Create new Color array
@@ -177,8 +174,7 @@ public class CloudGenerator : MonoBehaviour
         return colors;
     }
 
-
-    // Generate n distinct colors for use in 
+    // Generate distinct colors for use in
     private Color[] GenerateSpecificColors(float[] groupMeasures)
     {
         // Create new Color array

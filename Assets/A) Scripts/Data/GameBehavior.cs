@@ -21,9 +21,6 @@ public class GameBehavior : MonoBehaviour
     public int numSubdivisions = 100; // Batch rendering
     public int positionScale = 10; // Position scale factor
 
-
-    // CONSTRUCTOR
-
     // Construct certain classes upon script initialization
     void Awake()
     {
@@ -42,13 +39,10 @@ public class GameBehavior : MonoBehaviour
         _numRows = _positionData.matrix.Count;
     }
 
-
-    // PRIVATE VARIABLES WITH PUBLIC EXTENSIONS
-
     // Total number of samples
     private int _numRows;
 
-    // 2D Matrix of point positions
+    // 2D matrix of point positions
     private MatrixPos2 _positionData;
     public MatrixPos2 positionData
     {
@@ -56,7 +50,7 @@ public class GameBehavior : MonoBehaviour
         set { _positionData = value; }
     }
 
-    // 2D Matrix of point modeling features
+    // 2D matrix of glyph features
     private Matrix2 _modelingData;
     public Matrix2 modelingData
     {
@@ -64,7 +58,7 @@ public class GameBehavior : MonoBehaviour
         set { _modelingData = value; }
     }
 
-    // 2D Matrix of point modeling features
+    // 2D matrix of glyph performance data
     private Matrix2 _perfData;
     public Matrix2 perfData
     {
@@ -95,9 +89,6 @@ public class GameBehavior : MonoBehaviour
         get { return _groupCounts; }
         set { _groupCounts = value; }
     }
-
-
-    // PUBLICLY ACCESSIBLE METHODS
 
     // Method to delete samples and reconfigure mesh
     public void DeleteSamples(List<int> indices)

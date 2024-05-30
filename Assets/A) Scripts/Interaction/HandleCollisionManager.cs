@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class HandleCollisionManager : MonoBehaviour
 {
-    // VARIABLES
+    // Variables
     public InputActionProperty _rightPinch;
     public InputActionProperty _leftPinch;
     private bool _isGrabbed;
@@ -16,7 +16,6 @@ public class HandleCollisionManager : MonoBehaviour
         get { return _isGrabbed; }
     }
 
-    // METHODS
     // Detect if colliders enter
     private void OnTriggerEnter(Collider other)
     {

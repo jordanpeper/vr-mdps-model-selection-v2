@@ -5,11 +5,8 @@ using System.Linq;
 using System.IO;
 using UnityEngine;
 
-
 public class MatrixPos2
 {
-    // PRIVATELY ACCESSIBLE VARIABLES WITH PUBLIC READ-ONLY EXNTENSIONS
-
     // Vector3 list containing local positions
     private List<Vector3> _matrix;
     public List<Vector3> matrix
@@ -31,11 +28,8 @@ public class MatrixPos2
         get { return _staticMatrix; }
     }
 
-    private Transform _trackedTransform;
-    private float _positionScale;
-
-
-    // CONSTRUCTOR METHODS
+    private Transform _trackedTransform; // Transform about which local positions are mapped to global
+    private float _positionScale; // Scale factor applied to raw position data
 
     // MatrixManager constructor
     public MatrixPos2(TextAsset csvFile, Transform trackedTransform, float positionScale)
@@ -56,7 +50,7 @@ public class MatrixPos2
             _globalMatrix.Add(newVector3);
         }
 
-        // Set trackked transform and determine initial global positions
+        // Set tracked transform and determine initial global positions
         _trackedTransform = trackedTransform;
         SetGlobalTransform();
 
@@ -84,9 +78,6 @@ public class MatrixPos2
             _globalMatrix[i] = _trackedTransform.TransformPoint(_matrix[i]);
         }
     }
-
-
-    // PRIVATELY ACCESSIBLE METHODS
 
     // Private method to convert a CSV file to the desired format
     private List<float[]> ImportCSV(TextAsset newDataset)

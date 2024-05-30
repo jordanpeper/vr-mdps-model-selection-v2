@@ -5,30 +5,23 @@ using System.Linq;
 using System.IO;
 using UnityEngine;
 
-
 public class Matrix2
 {
-    // PRIVATELY ACCESSIBLE VARIABLES WITH PUBLIC READ-ONLY EXNTENSIONS
-
-    //  Form of the matrix which may be altered from original state
+    // Array typically accessed to retrieve current data
     private List<float[]> _matrix;
     public List<float[]> matrix
     {
         get { return _matrix; }
     }
 
-    //  Form of the matrix which may be altered from original state
+    // Array typically accessed to retrieve original data
     private List<float[]> _staticMatrix;
     public List<float[]> staticMatrix
     {
         get { return _staticMatrix; }
     }
 
-
-
-    // CONSTRUCTOR METHODS
-
-    // MatrixManager constructor
+    // Constructor
     public Matrix2(TextAsset csvFile)
     {
         // Import CSV data
@@ -53,7 +46,7 @@ public class Matrix2
         Debug.LogFormat("New 2D Matrix: {0}x{1}", _matrix.Count, _matrix[0].Length);
     }
 
-    // Public method to reset the dynamic matrix to original (static)
+    // Restore the dynamic matrix to initial values
     public void Restore()
     {
         // Make a deep copy of the matrix
@@ -66,10 +59,7 @@ public class Matrix2
         }
     }
 
-
-    // PRIVATELY ACCESSIBLE METHODS
-
-    // Private method to convert a CSV file to the desired format
+    // Parse csv file iteratively
     private List<float[]> ImportCSV(TextAsset newDataset)
     {
         // Split the TextAsset along newline

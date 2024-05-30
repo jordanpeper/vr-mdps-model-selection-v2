@@ -6,19 +6,18 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PinchScale : MonoBehaviour
 {
-    // PUBLICLY ACCESSIBLE VARIABLES
+    // Public variables
     public float scaleSensitivity = 1; // Sensitivity of scaling motion; 1 => direct correlation
     public Transform _leftHandTransform; // Left and right hand gameObjects 
     public Transform _rightHandTransform; //
     public InputActionProperty _leftPinch; // Left and right pinch inputs
     public InputActionProperty _rightPinch; //
 
-    // PRIVATELY ACCESSIBLE VARIABLES
+    // Private variables
     private float _distanceDatum; // Datum of distance between hands
     private Collider _collider; // The collider of the gameObject being scaled
     private GameObject _pseudoPivot;
     private bool _pinchScaleIsRunning = false;
-
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +28,6 @@ public class PinchScale : MonoBehaviour
         // Create new empty gameObject as pseudoPivot
         _pseudoPivot = new GameObject("PseudoPivot"); 
     }
-
 
     // Update is called once per frame
     void Update()

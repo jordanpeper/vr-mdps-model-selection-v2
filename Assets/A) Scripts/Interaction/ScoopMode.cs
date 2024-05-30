@@ -8,11 +8,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ScoopMode : MonoBehaviour
 {
-    // Publicly accessible variables
+    // Public variables
     public GameBehavior gameBehavior;
     public InputActionProperty scoopHoldButton;
 
-    // Privately accessible variables
+    // Private variables
     private BoxCollider _palmCollider;
     private InputActionProperty _scoopHoldButton;
     private List<int> _removalIndices;
@@ -25,7 +25,6 @@ public class ScoopMode : MonoBehaviour
         _palmCollider = gameObject.GetComponent<BoxCollider>();
         _positionData = gameBehavior.positionData;
     }
-
 
     // Update is called once per frame
     void Update()
