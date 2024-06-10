@@ -6,6 +6,6 @@ Modern developments in autonomous chemometric machine learning technology strive
 ## Resources
 * Access [version 1 movie](https://www.youtube.com/watch?v=fG1gBQP7Ohc)
 * Access [version 2 movie](https://www.youtube.com/watch?v=SDycQOH_N2E)
-## Contacts
-* [Jordan M.J. Peper](www.linkedin.com/in/jordanpeper) | Idaho State University | jordanpeper@isu.edu
-* John H. Kalivas | Idaho State University | kalijohn@isu.edu
+## Authors
+1. [Jordan M.J. Peper](www.linkedin.com/in/jordanpeper) | Idaho State University | jordanpeper@isu.edu
+2. John H. Kalivas | Idaho State University | kalijohn@isu.edu
