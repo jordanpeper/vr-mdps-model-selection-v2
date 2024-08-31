@@ -1,6 +1,5 @@
 # VR MDPS Model Selection v2
 ## Overview
-### Brief
 The following project includes all necessary assets (scripts, prefabs, etc.) to run the VR MDPS model selection environment in the Unity game engine. All users are encouraged to read the manuscript.
 ### Getting started
 * Clone the repository to your local disc, and add it to the Unity desktop hub by selecting "Open" and selecting the project
